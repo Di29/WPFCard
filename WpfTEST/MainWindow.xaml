@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfTEST.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTEST"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        
+        Title="MainWindow" Height="450" Width="800">
+    <smtx:XamlDisplay Key="cards_1" Margin="4 4 0 0" VerticalContentAlignment="Top">
+        <materialDesign:Card Width="200">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="140" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Image Source="Resources/Dias.jpg" Height="140" Width="196" Stretch="UniformToFill" />
+                <Button Grid.Row="0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" 
+                        HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                        Margin="0 0 16 -20">
+                    <materialDesign:PackIcon Kind="Account" />
+                </Button>
+                <StackPanel Grid.Row="1" Margin="8 24 8 0" >
+                    <TextBlock FontWeight="Bold">About Me</TextBlock>
+                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center">Уринбасаров Диас. 29.01.2000 года рождения. Детсво провел в городе Экибастуз. Студент ЖД колледжа и компьютерной академий ШАГ. </TextBlock>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Grid.Row="2" Orientation="Horizontal" Margin="8">
+                    <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
+                            materialDesign:RippleAssist.IsCentered="True">
+                        <materialDesign:PackIcon Kind="ShareVariant" />
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignToolButton}" Width="30" Padding="2 0 2 0"
+                            materialDesign:RippleAssist.IsCentered="True">
+                        <materialDesign:PackIcon Kind="Heart" />
+                    </Button>
+                    
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+    </smtx:XamlDisplay>
+</Window>
